@@ -1,0 +1,17 @@
+{
+  "name": "kodexis-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site institucional Kodexis com quatro demonstra\u00e7\u00f5es interativas locais.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "css-tree": "^3.2.1",
+    "html-validate": "^11.21.1"
+  }
+}
