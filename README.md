@@ -2,6 +2,8 @@
 
 Site institucional em português, com visual escuro, logo original e quatro demonstrações que funcionam inteiramente no navegador.
 
+Site: [kodexis.com.br](https://kodexis.com.br/) · Hospedagem alternativa: [kodexis.pages.dev](https://kodexis.pages.dev/).
+
 ## Demonstrações
 
 - **Fluxo:** receitas e despesas, criação/edição/exclusão, filtros, totais, gráficos e exportação CSV.
@@ -35,6 +37,8 @@ No Windows local, os testes utilizam o Chrome instalado; no CI, o Chromium do Pl
 ## Publicação na Cloudflare Pages
 
 O build `npm run build` produz a pasta `dist/`. Ela contém somente o site público, sem dependências, testes ou credenciais. Pode ser publicada por Direct Upload ou Wrangler. Não há servidor de aplicação e nenhuma variável secreta é necessária.
+
+O cabeçalho `Cache-Control: public, max-age=0, must-revalidate, no-transform` preserva o HTML original e impede a injeção automática do beacon de estatísticas pelo proxy Cloudflare. A política de segurança permite scripts apenas do próprio site.
 
 Para integração Git, use o comando de build `npm run build` e a pasta de saída `dist`. Projetos de Direct Upload têm um modelo de integração separado; consulte a documentação da Cloudflare antes de mudar de estratégia.
 
